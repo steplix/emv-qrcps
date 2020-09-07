@@ -1,0 +1,44 @@
+{
+  "name": "steplix-emv-qrcps",
+  "version": "0.0.8",
+  "deprecated": false,
+  "description": "Project to generate QRCode in EMV specification formmat.",
+  "main": "index.js",
+  "homepage": "https://github.com/steplix/emv-qrcps#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steplix/emv-qrcps.git"
+  },
+  "author": "Steplix Developers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steplix/emv-qrcps/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "crc": "^3.8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "sinon": "^7.5.0"
+  },
+  "keywords": [
+    "EMV",
+    "QRCPS",
+    "QRcode",
+    "Payment"
+  ],
+  "scripts": {
+    "lint": "node_modules/.bin/eslint qrcode test",
+    "lint-fix": "node_modules/.bin/eslint --fix qrcode test",
+    "test": "nyc --reporter=lcov --reporter=text-summary ./node_modules/.bin/mocha --recursive"
+  }
+}
