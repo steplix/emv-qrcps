@@ -10,7 +10,7 @@ This version fixes the CRC generated in cases where the resulting code is less t
 # Installing
 
 ```
-npm install emv-qrcps
+npm install steplix-emv-qrcps
 ```
 
 # Modules
@@ -25,7 +25,7 @@ There are 2 modules in this library.
 You can use this Module by importing:
 
 ```
-const { Merchant } = require('emv-qrcode');
+const { Merchant } = require('steplix-emv-qrcps');
 ```
 
 ### Methods
@@ -218,7 +218,7 @@ const unreservedTemplate = Merchant.buildUnreservedTemplate(
 Represents a **TAG** + **Length** + **Value**.
 
 ```
-const { Merchant } = require('emv-qrcode');
+const { Merchant } = require('steplix-emv-qrcps');
 const { Constants } = Merchant;
 
 const tag = "01";
@@ -265,7 +265,7 @@ const tlvRawFormat = TLV.dataWithType(Constants.DATA_TYPE.RAW, ' '); // Raw Data
 Represents a merchant account information.
 
 ```
-const { Merchant } = require('emv-qrcode');
+const { Merchant } = require('steplix-emv-qrcps');
 const { Constants } = Merchant;
 
 const merchantAccountInformation = Merchant.buildMerchantAccountInformation();
@@ -334,7 +334,7 @@ merchantAccountInformation.addPaymentNetworkSpecific(id, value);
 Represents a merchant information language template.
 
 ```
-const { Merchant } = require('emv-qrcode');
+const { Merchant } = require('steplix-emv-qrcps');
 const { Constants } = Merchant;
 
 const merchantInformationLanguageTemplate = Merchant.buildMerchantInformationLanguageTemplate();
@@ -437,7 +437,7 @@ merchantInformationLanguageTemplate.addRFUforEMVCo(id, value);
 Represents a merchant account information.
 
 ```
-const { Merchant } = require('emv-qrcode');
+const { Merchant } = require('steplix-emv-qrcps');
 const { Constants } = Merchant;
 
 const unreservedTemplate = Merchant.buildUnreservedTemplate();
@@ -506,7 +506,7 @@ unreservedTemplate.addContextSpecificData(id, value);
 Represents a payment system specific.
 
 ```
-const { Merchant } = require('emv-qrcode');
+const { Merchant } = require('steplix-emv-qrcps');
 const { Constants } = Merchant;
 
 const paymentSystemSpecific = Merchant.buildPaymentSystemSpecific();
@@ -575,7 +575,7 @@ paymentSystemSpecific.addPaymentSystemSpecific(id, value);
 Represents an additional data field template.
 
 ```
-const { Merchant } = require('emv-qrcode');
+const { Merchant } = require('steplix-emv-qrcps');
 const { Constants } = Merchant;
 
 const additionalDataFieldTemplate = Merchant.buildAdditionalDataFieldTemplate();
@@ -764,7 +764,7 @@ additionalDataFieldTemplate.addPaymentSystemSpecific(id, value);
 Represents an EMV QRCode.
 
 ```
-const { Merchant } = require('emv-qrcode');
+const { Merchant } = require('steplix-emv-qrcps');
 const { Constants } = Merchant;
 
 const emvqr = Merchant.buildEMVQR();
@@ -1083,7 +1083,7 @@ emvqr.addRFUforEMVCo(id, value);
 You can use this Module by importing:
 
 ```
-const { Consumer } = require('emv-qrcode')
+const { Consumer } = require('steplix-emv-qrcps')
 ```
 
 ### Methods
@@ -1259,7 +1259,7 @@ const EMVQR = Consumer.buildEMVQR(
 Represents a **Basic Encoding Rules** **TAG** + **Length** + **Value**.
 
 ```
-const { Consumer } = require('emv-qrcode');
+const { Consumer } = require('steplix-emv-qrcps');
 const { Constants } = Merchant;
 
 const berTLV = Merchant.buildBERTLV();
@@ -1467,7 +1467,7 @@ const berTlvRawFormat = berTLV.dataWithType(Constants.DATA_TYPE.RAW, ' '); // Ra
 Represents an application specific transparent template.
 
 ```
-const { Consumer } = require('emv-qrcode');
+const { Consumer } = require('steplix-emv-qrcps');
 const { Constants } = Consumer;
 
 const applicationSpecificTransparentTemplate = Consumer.buildApplicationSpecificTransparentTemplate();
@@ -1525,7 +1525,7 @@ const rawFormat = applicationSpecificTransparentTemplate.dataWithType(Constants.
 Represents a common data transparent template.
 
 ```
-const { Consumer } = require('emv-qrcode');
+const { Consumer } = require('steplix-emv-qrcps');
 const { Constants } = Consumer;
 
 const commonDataTransparentTemplate = Consumer.buildCommonDataTransparentTemplate();
@@ -1583,7 +1583,7 @@ const rawFormat = commonDataTransparentTemplate.dataWithType(Constants.DATA_TYPE
 Represents an application template.
 
 ```
-const { Consumer } = require('emv-qrcode');
+const { Consumer } = require('steplix-emv-qrcps');
 const { Constants } = Consumer;
 
 const applicationTemplate = Consumer.buildApplicationTemplate();
@@ -1658,7 +1658,7 @@ const rawFormat = applicationTemplate.dataWithType(Constants.DATA_TYPE.RAW, ' ')
 Represents a common data template.
 
 ```
-const { Consumer } = require('emv-qrcode');
+const { Consumer } = require('steplix-emv-qrcps');
 const { Constants } = Consumer;
 
 const commonDataTemplate = Consumer.buildCommonDataTemplate();
@@ -1735,7 +1735,7 @@ const rawFormat = commonDataTemplate.dataWithType(Constants.DATA_TYPE.RAW, ' ');
 Represents an EMV QRCode.
 
 ```
-const { Consumer } = require('emv-qrcode');
+const { Consumer } = require('steplix-emv-qrcps');
 const { Constants } = Consumer;
 
 const emvqr = Consumer.buildEMVQR();
